@@ -8,3 +8,8 @@
 /* Brand experience label and cleaner gallery tiles */
 .gallery-open{display:none!important}.mobile-experience{display:none}.experience-banner{background:#dfeadd;color:#17452b;text-align:center;padding:13px 18px;font-weight:800;letter-spacing:.04em}
 @media(max-width:800px){.mobile-experience{display:block;margin-left:auto;color:#205b36;font-weight:800;font-size:clamp(10px,2.6vw,13px);white-space:nowrap}.nav{gap:10px}.brand img{width:clamp(105px,30vw,165px)}.menu{flex-shrink:0}.mobilecall{gap:6px}}
+
+/* Header becomes translucent as visitors scroll; preserve legibility. */
+header{transition:background-color .3s ease,box-shadow .3s ease,border-color .3s ease; -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+header.is-scrolled{background:rgba(247,246,238,.70);border-bottom-color:rgba(32,91,54,.14);box-shadow:0 6px 24px rgba(9,45,27,.07);-webkit-backdrop-filter:blur(18px) saturate(145%);backdrop-filter:blur(18px) saturate(145%)}
+@media(max-width:800px){header.is-scrolled{background:rgba(247,246,238,.78)}.links.open{background:rgba(247,246,238,.97)}}
